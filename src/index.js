@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { GlobalStyle, theme } from './style'
 import App from './App';
-import store from './store'
 const Page = (
-  <Provider store={store}>
+    <React.Fragment>
     {/* 全局样式 */}
     <GlobalStyle />
     {/* 全局变量 */}
@@ -19,6 +17,6 @@ const Page = (
         </Switch>
       </Router>
     </ThemeProvider>
-  </Provider>
+    </React.Fragment>
 )
 ReactDOM.render(Page, document.getElementById('root'));
