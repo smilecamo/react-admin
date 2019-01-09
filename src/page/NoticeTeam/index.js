@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MNav from '../Nav'
 import Alert from 'react-s-alert';
 import Axios from 'axios';
 import {
@@ -76,6 +77,8 @@ class NoticeUser extends Component {
   }
   render(){
     return(
+      <React.Fragment>
+      <MNav></MNav>
       <NoticeUserWrapper>
         <NoticeTable>
           <NoticeThead>
@@ -89,7 +92,6 @@ class NoticeUser extends Component {
             </NoticeTableTr>
           </NoticeThead>
           <NoticeTbody>
-          
             {
               this.state.list.map((item) => {
                 return(
@@ -115,6 +117,7 @@ class NoticeUser extends Component {
           </NoticeTbody>
         </NoticeTable>
       </NoticeUserWrapper>
+      </React.Fragment>
     )
   }
 }

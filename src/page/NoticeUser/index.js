@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Alert from 'react-s-alert';
+import MNav from '../Nav'
 import {
   NoticeUserWrapper,
   NoticeTable,
@@ -72,6 +73,9 @@ class NoticeUser extends Component {
   }
   render(){
     return(
+      <React.Fragment>
+        <MNav></MNav>
+      
       <NoticeUserWrapper>
         <NoticeTable>
           <NoticeThead>
@@ -111,6 +115,7 @@ class NoticeUser extends Component {
           </NoticeTbody>
         </NoticeTable>
       </NoticeUserWrapper>
+      </React.Fragment>
     )
   }
 }

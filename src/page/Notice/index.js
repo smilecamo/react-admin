@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import MNav from '../Nav'
 import {
   NoticeWrapper,
   NoticeBtn
@@ -8,6 +9,7 @@ class Notice extends Component{
   render(){
     return(
       <React.Fragment>
+        <MNav></MNav>
         <NoticeWrapper>
           <Link to='/noticeuser'>
             <NoticeBtn>通知创作活动获奖者</NoticeBtn>

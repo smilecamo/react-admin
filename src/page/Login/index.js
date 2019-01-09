@@ -90,6 +90,16 @@ class Login extends Component{
       timeout: 2000
     })
   }
+  sucess(){
+    this.props.history.push("/");
+    sessionStorage.setItem('loginIn', true);
+    // 刷新页面 暂时解决数据不更新问题
+    window.location.reload();
+  }
+  componentDidMount(){
+    const loginIn = sessionStorage.getItem('loginIn');
+    loginIn ? this.props.history.push("/") : this.props.history.push("/login")
+  }
   login(){
     if (this.state.user === '' || this.state.passworld === ''){
       Alert.error('请输入用户名或密码', {
@@ -107,7 +117,7 @@ class Login extends Component{
         }
       })
         .then((res) => {
-          (res.data === '0' || res.data === 0) ? this.err(): this.props.history.push("/");
+          (res.data === '0' || res.data === 0) ? this.err(): this.sucess();
         })
     }
   }

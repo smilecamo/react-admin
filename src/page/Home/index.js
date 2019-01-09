@@ -1,9 +1,11 @@
 import React from 'react';
+import MNav from '../Nav'
 import {
   HomeWrapper
 } from './style'
 const Home = () => {
   return (
+    <MNav>
     <HomeWrapper>
       &emsp;&emsp;童话是通过丰富的想象、 幻想和夸张来编写适合于儿童欣赏的故事。 
       <br/>&emsp;&emsp;而科普微童话则是通过孩子们丰富的想象力、 探索力和创新力来编写的能激发儿童学习科普知识提升儿童科学文化素养的一种不限于文字、 图片和声音等形式的新型艺术。 
@@ -15,6 +17,7 @@ const Home = () => {
       <br/>&emsp;&emsp;本次活动将以现代移动互联网技术为依托， 为活动参与者提供开放、 快捷、 科学、 友好、 共享的移动互联网活动平台。 
       <br/>&emsp;&emsp;同时， 还将丰富各类线下活动， 为广大科普爱好者展演少年儿童的科学探索过程， 形成良好的科普问文化学习氛围。
     </HomeWrapper>
+    </MNav>
   )
 }
 export default Home
