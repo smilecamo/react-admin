@@ -10,6 +10,7 @@ import MExportInfo from './page/Export'
 import MNotice from './page/Notice'
 import MNoticeUser from './page/NoticeUser'
 import MNoticeTeam from './page/NoticeTeam'
+import Err from './page/404'
 import MLogin from './page/Login'
 class MRouter extends Component{
   render(){
@@ -22,6 +23,7 @@ class MRouter extends Component{
           <AuthRoute path="/notice" exact component={MNotice}/>
           <AuthRoute path="/noticeuser" exact component={MNoticeUser}/>
           <AuthRoute path="/noticeteam" exact component={MNoticeTeam}/>
+          <Route component={Err} />
         </MApp>
       </Router>
     )
