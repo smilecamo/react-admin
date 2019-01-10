@@ -21,7 +21,7 @@ class NoticeUser extends Component {
     // this.show = this.show.bind(this)
   }
   componentDidMount(){
-    Axios.get('/findAllImessages.action')
+    Axios.get('/story/findAllImessages.action')
       .then((res) => {
         this.setState({
           list: res.data
@@ -45,7 +45,7 @@ class NoticeUser extends Component {
     }else{
       Axios({
         method: 'POST',
-        url: '/sendMsgNotice1.action',
+        url: '/story/sendMsgNotice1.action',
         params: {
           mobilephones: tel,
           ids: id

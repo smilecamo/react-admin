@@ -31,6 +31,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://www.pjxqw-edu.com/story/",
-  "homepage": "./"
+  "proxy": "https://www.pjxqw-edu.com/",
+  "homepage": "."
 }

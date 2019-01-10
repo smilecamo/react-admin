@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Alert from 'react-s-alert';
 import {
-  BrowserRouter as Router
+  HashRouter as Router
 } from "react-router-dom";
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';

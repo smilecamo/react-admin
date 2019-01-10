@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Alert from 'react-s-alert';
 import Axios from 'axios';
+import {redirect } from 'react-router-dom'
 import {
   LoginWrapper,
   LoginContent,
@@ -91,14 +92,17 @@ class Login extends Component{
     })
   }
   sucess(){
-    this.props.history.push("/");
+    this.props.history.replace("/");
     sessionStorage.setItem('loginIn', true);
     // 刷新页面 暂时解决数据不更新问题
     window.location.reload();
   }
   componentDidMount(){
     const loginIn = sessionStorage.getItem('loginIn');
-    loginIn ? this.props.history.push("/") : this.props.history.push("/login")
+    console.log(this.props.history);
+    // 暂时解决跳转问题
+    loginIn ? this.props.history.replace("/") : this.props.history.replace("/login");
+    console.log(this.props.history);
   }
   login(){
     if (this.state.user === '' || this.state.passworld === ''){
@@ -110,7 +114,7 @@ class Login extends Component{
     }else{
       Axios({
         methods: 'POST',
-        url: '/loginAction',
+        url: '/story/loginAction',
         params:{
           username: this.state.user,
           password: this.state.passworld
